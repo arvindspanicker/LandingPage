@@ -17,6 +17,7 @@ html, body{
 #showcase{
 	/*special thanks to arfan for the showcase image */
 	background-image: url('../img/top.jpg');
+	background-attachment: fixed;
 	height: 100%;
 	width: 100%;
 	margin:auto;
@@ -82,10 +83,12 @@ div.content{
 .w3-text-theme {
 	color:#080765 !important;
 }
-
+.w3-theme-color{
+	color:#fff !important; background-color: #2A79AB !important;
+}
 #section-1 h2{
-	margin-top: 0; 
-	padding-top: 0; 
+	margin-top: 0;
+	padding-top: 0;
 	text-align: center;
 	font-weight: bold;
 }
@@ -146,8 +149,16 @@ div.name h3{
 #section-4 h2{
 	font-weight: bold;
 }
+
 #section-5{
 	padding-top: 10px;
+	z-index=-1;
+	position: absolute;
+	margin-left:28%;
+}
+#particles-js{
+	background: #000;
+	height: 600px;
 }
 #section-5 h2{
 	font-weight: bold;
@@ -166,6 +177,13 @@ a{
     div.nav{
     	margin-top: 0;
     }
+		#particles-js{
+			height: 600px;
+		}
+		#section-5{
+			margin-left:15%;
+		}
+
 }
 @media only screen and (max-width: 500px){
 	.responsive {
@@ -173,5 +191,13 @@ a{
     }
     #section-1 p{
 	font-size: 150%;
+	}
+	#particles-js{
+		height: 600px;
+	}
+}
+@media only screen and (max-width: 900px){
+	#section-5{
+		margin-left:13%;
 	}
 }
