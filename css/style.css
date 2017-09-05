@@ -40,6 +40,9 @@ div.nav{
 	top: 0;
 	width: auto;
 }
+div.nav a{
+	 opacity: 0.8;
+}
 div.content{
 	max-width:  500px;
 	margin:10px auto;
@@ -136,6 +139,9 @@ div.name h3{
 }
 #section-2{
 	padding-top: 10px;
+	background-image: url('../img/baselios.jpg');
+	background-attachment: fixed;
+	background-size: cover;
 }
 #section-3{
 	padding-top: 10px;

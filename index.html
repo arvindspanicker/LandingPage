@@ -27,14 +27,14 @@
 	<!--ShowCase -->
 	<section id="showcase" class="w3-round">
 				<!--Nav Bar -->
-				<div class="w3-dropdown-hover  w3-top  w3-round-xxlarge nav">
-				    <button class="w3-button w3-black w3-round-xxlarge "><i class="fa fa-bars fa-2x w3-text-blue"></i></button>
-				    <div class="w3-dropdown-content w3-bar-block w3-grey w3-border w3-round-xxlarge">
-				      <a href="#section-1" class="w3-bar-item w3-button w3-round-xxlarge w3-text-theme slide-section">About Us</a>
-				      <a href="#section-2" class="w3-bar-item w3-button w3-round-xxlarge w3-text-theme slide-section">Events</a>
-				      <a href="#section-3" class="w3-bar-item w3-button w3-round-xxlarge w3-text-theme slide-section">Upcoming Events</a>
-				      <a href="#section-4" class="w3-bar-item w3-button w3-round-xxlarge w3-text-theme slide-section">Student Committee</a>
-				      <a href="#section-5" class="w3-bar-item w3-button w3-round-xxlarge w3-text-theme slide-section">Contact Us</a>
+				<div class=" w3-top  w3-round-xxlarge nav">
+				    <button class="w3-button w3-black w3-round-xxlarge navbtn"><i class="fa fa-bars fa-2x w3-text-blue"></i></button>
+				    <div class="w3-dropdown-content w3-bar-block w3-black w3-border w3-round-xlarge w3-opacity-min ">
+				      <a href="#section-1" class="w3-bar-item w3-button w3-round-xxlarge w3-text-white slide-section w3-hover-blue ">About Us</a>
+				      <a href="#section-2" class="w3-bar-item w3-button w3-round-xxlarge w3-text-white slide-section w3-hover-blue">Events</a>
+				      <a href="#section-3" class="w3-bar-item w3-button w3-round-xxlarge w3-text-white slide-section w3-hover-blue">Upcoming Events</a>
+				      <a href="#section-4" class="w3-bar-item w3-button w3-round-xxlarge w3-text-white slide-section w3-hover-blue">Student Committee</a>
+				      <a href="#section-5" class="w3-bar-item w3-button w3-round-xxlarge w3-text-white slide-section w3-hover-blue">Contact Us</a>
 				    </div>
 		  		</div>
 		<div class="inner">
@@ -331,37 +331,37 @@
 		window.sr =ScrollReveal();
 		sr.reveal('.nav',{
 			duration: 2000,
-			orgin: 'top',
+			origin: 'bottom',
 			mobile:false,
 			distance: '1000px'
 		});
 		sr.reveal('#section-1',{
 			duration:2000,
-			orgin:'left',
+			origin:'left',
 			mobile:false,
-			distance:'200px'
+			distance:'400px'
 		});
 		sr.reveal('#section-2',{
 			duration:2000,
-			orgin:'right',
+			origin:'right',
 			mobile:false,
-			distance:'200px'
+			distance:'400px'
 		});
 		sr.reveal('#section-3',{
 			duration:2000,
-			orgin:'left',
+			origin:'left',
 			mobile:false,
 			distance:'200px'
 		});
 		sr.reveal('#section-4',{
 			duration:2000,
-			orgin:'right',
+			origin:'right',
 			mobile:false,
 			distance:'200px'
 		});
 		sr.reveal('#section-5',{
 			duration:2000,
-			orgin:'bottom',
+			origin:'bottom',
 			mobile:false,
 			distance:'200px'
 		});
@@ -373,10 +373,17 @@
 		$('.slide-section').click(function(e){
 			var linkhref=$(this).attr('href');
 			$('html, body').animate({
-				scrollTop: $(linkhref).offset().top -200
+				scrollTop: $(linkhref).offset().top - 60
 			},1000);
 			e.preventDefault();
 		});
+	});
+
+	$(".navbtn").on("click", function () {
+  $(".w3-dropdown-content").toggle();
+	});
+	$(".w3-bar-item").on("click", function(){
+    $(".w3-dropdown-content").hide();
 	});
 	</script>
 </body>
